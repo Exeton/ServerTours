@@ -6,3 +6,5 @@ author: FireFlower
 depend: [HolographicDisplays]
 commands:
   ST:
+    permission: "ServerTours.ST"
+    permission-message: "You need permission ServerTours.ST"

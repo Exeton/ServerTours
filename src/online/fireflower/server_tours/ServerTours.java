@@ -21,8 +21,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
-//Uses https://github.com/filoghost/HolographicDisplays
-
 public class ServerTours extends JavaPlugin {
 
     public static ServerTours main;
