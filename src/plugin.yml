@@ -1,0 +1,8 @@
+main: online.fireflower.server_tours.ServerTours
+name: ServerTours
+description: Used to create tours for your server
+version: 1.0
+author: FireFlower
+depend: [HolographicDisplays]
+commands:
+  ST:

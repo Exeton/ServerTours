@@ -1,0 +1,39 @@
+#StCreate
+AlreadyCreatingMessage: "&6You are already creating a server tour"
+YouHaveStartedCreatingMessage: "&6You are now creating course %id%"
+
+#StFinish
+NotCreatingCourse: "&6You're not making a course"
+SuccessfulCourseCreation: "&6Created course %id%"
+
+#StQuitCreation
+QuitCreation: "&6You stopped creating a tour"
+
+#St Delete
+DeletionSuccess: "&6Deleted course %id%"
+CourseNotFound: "&6Could not find course %id%"
+
+#St Quit
+NotInTour: "&6You're not in a tour"
+TourQuit: "&6You quit your tour"
+
+STListColorCodePrefix: "&6"
+
+StHelpMessages:
+  - "&7 =-=-=-=-=-=-=&6Commands&7=-=-=-=-=-=-="
+  - "&6 /st help"
+  - "&6 /st create tourName"
+  - "&6 /st finish tourName"
+  - "&6 /st quitCreation tourName"
+  - "&6 /st <tourName> trail set ParticleId"
+  - "&6 /st <tourName> start Notch"
+  - "&6 /st <tourName> holoBook"
+
+#Hologram book
+hologramBookName: "&6Hologram &7Book"
+hologramBookLore:
+  - "&6Use this book to create holograms."
+  - "&6Type /n for a new line"
+  - "&6 Sign this book, and the hologram will"
+  - "&6 be created at your current location"
+checkpointCreatedMessage: "&6 Checkpoint created"
