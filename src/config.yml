@@ -28,7 +28,8 @@ StHelpMessages:
   - "&6 /st list"
   - "&6 /st <tourName> trail ParticleId"
   - "&6 /st <tourName> start (or show) Notch"
-  - "&6 /st quit"
+  - "&6 /ST <tourName> quit (or hide) Notch"
+  - "&6 /quitTour"
   - "&6 /st <tourName> holoBook"
 
 #Hologram book

@@ -2,10 +2,7 @@ package online.fireflower.server_tours;
 
 import online.fireflower.server_tours.commands.*;
 import online.fireflower.server_tours.commands.PlayerOnTour.STQuit;
-import online.fireflower.server_tours.commands.tourCommands.STHologramBook;
-import online.fireflower.server_tours.commands.tourCommands.STSetParticle;
-import online.fireflower.server_tours.commands.tourCommands.STStartTour;
-import online.fireflower.server_tours.commands.tourCommands.STTourCommand;
+import online.fireflower.server_tours.commands.tourCommands.*;
 import online.fireflower.server_tours.creation.FileServerTourCRUD;
 import online.fireflower.server_tours.creation.IServerTourCRUD;
 import online.fireflower.server_tours.creation.ServerTourCreationInfo;
@@ -51,7 +48,6 @@ public class ServerTours extends JavaPlugin {
         serverTourCommands.put("create", new STCreate(serverTourCreationInfoHashMap));
         serverTourCommands.put("finish", new STFinish(serverTourCreationInfoHashMap, serverTours, namesAndServerTours, serverTourCRUD));
         serverTourCommands.put("quitcreation", new STQuitCreation(serverTourCreationInfoHashMap));
-        serverTourCommands.put("quit", new STQuit(serverTours));
         serverTourCommands.put("list", new STList(serverTours));
 
         List<String> helpPlainText = config.getStringList("StHelpMessages");
@@ -66,14 +62,19 @@ public class ServerTours extends JavaPlugin {
         HashMap<String, STTourCommand> idBasedCommands = new HashMap<>();
 
         STStartTour startTour = new STStartTour();
-
         idBasedCommands.put("start", startTour);
         idBasedCommands.put("show", startTour);
+
+        STQuitTour quitTour = new STQuitTour();
+        idBasedCommands.put("quit", quitTour);
+        idBasedCommands.put("hide", quitTour);
+
         idBasedCommands.put("trail", new STSetParticle(serverTourCRUD));
         idBasedCommands.put("holobook", getHologramBook(config));
 
         ServerToursCommand serverToursCommand = new ServerToursCommand(serverTourCommands, idBasedCommands, namesAndServerTours);
         this.getCommand("St").setExecutor(serverToursCommand);
+        this.getCommand("quitTour").setExecutor(new STQuit(serverTours));
 
 
         Runnable trailRunnable = new TrailDisplayerRunnable(serverTours);

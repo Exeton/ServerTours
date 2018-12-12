@@ -5,13 +5,13 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class STStartTour extends STTourCommand {
+public class STQuitTour extends STTourCommand {
 
     @Override
     public void execute(CommandSender commandSender, ServerTourInfo serverTour, String[] args) {
 
         if (args.length <= 0){
-            commandSender.sendMessage("Usage /ST <tourName> start Notch");
+            commandSender.sendMessage("Usage /ST <tourName> quit Notch");
             return;
         }
 
@@ -20,6 +20,6 @@ public class STStartTour extends STTourCommand {
         if (player == null){
             commandSender.sendMessage("Player not found");
         }
-        serverTour.addActivePlayer(player);
+        serverTour.removeActivePlayer(player);
     }
 }

@@ -66,8 +66,6 @@ public class ServerToursCommand implements CommandExecutor {
 
             stCommand.execute(commandSender, serverTourInfo, args);
         }
-
-
         return true;
     }
 }
