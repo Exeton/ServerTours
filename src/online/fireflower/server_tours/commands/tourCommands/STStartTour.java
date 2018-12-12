@@ -9,6 +9,10 @@ public class STStartTour extends STTourCommand {
 
     @Override
     public void execute(CommandSender commandSender, ServerTourInfo serverTour, String[] args) {
+
+        if (args.length < 0)
+            commandSender.sendMessage("Usage /ST <tourName> start Notch");
+
         Player player = Bukkit.getPlayer(args[0]);
         if (player == null){
             commandSender.sendMessage("Player not found");

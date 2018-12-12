@@ -36,8 +36,12 @@ public class ServerTourInfo {
 
     public void addActivePlayer(Player player){
 
+        if (activePlayers.contains(player))
+            return;
+
         for (Checkpoint checkpoint : checkpoints)
             checkpoint.hologram.getVisibilityManager().showTo(player);
+
 
         activePlayers.add(player);
     }
