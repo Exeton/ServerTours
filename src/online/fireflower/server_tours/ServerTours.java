@@ -72,6 +72,10 @@ public class ServerTours extends JavaPlugin {
         idBasedCommands.put("trail", new STSetParticle(serverTourCRUD));
         idBasedCommands.put("holobook", getHologramBook(config));
 
+        STDelete stDelete = new STDelete(serverTours, namesAndServerTours, serverTourCRUD);
+        idBasedCommands.put("delete", stDelete);
+        idBasedCommands.put("remove", stDelete);
+
         ServerToursCommand serverToursCommand = new ServerToursCommand(serverTourCommands, idBasedCommands, namesAndServerTours);
         this.getCommand("St").setExecutor(serverToursCommand);
         this.getCommand("quitTour").setExecutor(new STQuit(serverTours));
@@ -113,5 +117,7 @@ public class ServerTours extends JavaPlugin {
         STList.chatColor = ChatColor.translateAlternateColorCodes('&', config.getString("STListColorCodePrefix"));
 
         BookSign.checkpointCreatedMessage = ChatColor.translateAlternateColorCodes('&', config.getString("checkpointCreatedMessage"));
+        STDelete.tourDeletedMessage = ChatColor.translateAlternateColorCodes('&', config.getString("tourDeletedMessage"));
+
     }
 }

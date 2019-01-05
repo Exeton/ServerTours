@@ -31,12 +31,14 @@ StHelpMessages:
   - "&6 /ST <tourName> quit (or hide) Notch"
   - "&6 /quitTour"
   - "&6 /st <tourName> holoBook"
+  - "&6 /st <tourName> delete (or remove)"
 
 #Hologram book
 hologramBookName: "&6Hologram &7Book"
 hologramBookLore:
   - "&6Use this book to create holograms."
   - "&6Type /n for a new line"
-  - "&6 Sign this book, and the hologram will"
-  - "&6 be created at your current location"
-checkpointCreatedMessage: "&6 Checkpoint created"
+  - "&6Sign this book, and the hologram will"
+  - "&6be created at your current location"
+checkpointCreatedMessage: "&6Checkpoint created"
+tourDeletedMessage: "&6Tour deleted"
